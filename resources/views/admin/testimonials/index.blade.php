@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <div class="row">
 
-                        {{-- <div class="col-lg-6 d-flex align-items-stretch">
+                        <div class="col-lg-6 d-flex align-items-stretch">
                             <div class="card w-100 border position-relative overflow-hidden">
                                 <div class="card-body p-4">
                                     <h4 class="card-title">Change Image</h4>
@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div> 
                         <div class="col-lg-12 d-flex align-items-stretch">
                             <div class="card w-100 border position-relative overflow-hidden">
                                 <div class="card-body p-4">
@@ -117,15 +117,15 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>
-                                                {{-- <div class="d-flex align-items-center gap-6 crud_thumbnail_icon">
+                                                 <div class="d-flex align-items-center gap-6 crud_thumbnail_icon">
                                                     <img src="{{ get_site_image_src('testimonials', !empty($row->image) ? $row->image : '') }}"
                                                         width="45" class="rounded-circle" />
                                                     <h6 class="mb-0"> {{ $row->name }}</h6>
-                                                </div> --}}
+                                                </div> -
 
-                                                <div class="d-flex align-items-center gap-6 crud_thumbnail_icon">
+                                                <!-- <div class="d-flex align-items-center gap-6 crud_thumbnail_icon">
                                                     <h6 class="mb-0"> {{ $row->name }}</h6>
-                                                </div>
+                                                </div> -->
 
                                             </td>
                                             <td>

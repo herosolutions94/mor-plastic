@@ -239,73 +239,7 @@
 
                     </div>
                     <div class="colR">
-                        <div id="owl-testi" class="owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="inner">
-                                    <div class="comnt_testi">
-                                        <p>We needed custom drum liners on short notice, and MOR Plastics delivered ahead of
-                                            schedule. The quality was outstanding, and the team was a pleasure to work with.
-                                        </p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="testi_icon">
-                                            <img src="assets/images/2.png" alt="">
-                                        </div>
-                                        <h5>— Jordan L., Operations Manager</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="inner">
-                                    <div class="comnt_testi">
-                                        <p>MOR Plastics has been our go-to supplier for pail inserts and custom solutions.
-                                            They’re consistent, responsive, and always ready to adapt to our requirements.
-                                        </p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="testi_icon">
-                                            <img src="assets/images/1.png" alt="">
-                                        </div>
-                                        <h5>— Sarah K., Procurement Specialist</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="inner">
-                                    <div class="comnt_testi">
-                                        <p>The team at MOR Plastics offered creative ideas that made our packaging more
-                                            efficient and environmentally friendly. Their expertise saved us both time and
-                                            money.</p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="testi_icon">
-                                            <img src="assets/images/2.png" alt="">
-                                        </div>
-                                        <h5>— Carlos M., Plant Supervisor</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="inner">
-                                    <div class="comnt_testi">
-                                        <p>From the first call to final delivery, the process was seamless. Highly recommend
-                                            for any custom plastic needs.</p>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="testi_icon">
-                                            <img src="assets/images/1.png" alt="">
-                                        </div>
-                                        <h5>— Nina D., Project Engineer</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                       @include('frontend.includes.testimonials')
                     </div>
                 </div>
             </div>

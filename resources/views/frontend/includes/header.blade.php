@@ -60,11 +60,11 @@
         <div class="toggle"><span></span></div>
         <nav class="ease" nav id="nav">
             <ul>
-                <li class=""><a href="index.php">Home</a></li>
+                <li class=""><a href="/">Home</a></li>
                 <li class=""><a href="{{ url('about') }}">About</a></li>
 
                 <li class=""><a href="{{ url('capabilities') }}">Capabilities</a></li>
-                <li class=""><a href="product.php">Products</a></li>
+                <li class=""><a href="{{  url('products')}}">Products</a></li>
 
 
                 <li class="btn_blk"><a href="{{ url('contact') }}" class="site_btn">Contact Us</a></li>

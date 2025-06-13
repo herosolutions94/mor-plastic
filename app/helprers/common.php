@@ -3807,13 +3807,11 @@ function get_pages()
     return $page_arr = array(
         '/' => 'Home',
         '/about' => 'About Us',
-        '/hire-talent' => 'Hire Talent',
-        '/story-concept' => 'Story & Concept',
+      
         '/contact' => 'Contact Us',
-        '/service' => 'Service',
-        '/areas-of-expertise' => 'Area Of Experties',
-        '/privacy-policy' => 'Privacy Policy',
-        '/terms-conditions' => 'Terms & Conditions'
+       
+        '/capabilities' => 'Capabilities',
+        '/products' => 'Products'
     );
 }
 
