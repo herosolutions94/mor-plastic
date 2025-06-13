@@ -29,7 +29,7 @@ class Pages extends Controller
             }
             if (!is_array($content_row))
                 $content_row = array();
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 30; $i++) {
                 if ($request->hasFile('image' . $i)) {
 
                     $request->validate([
