@@ -233,7 +233,7 @@ class Pages extends Controller
 
     
 
-    public function hardscapes(Request $request)
+    public function capabilities(Request $request)
     {
         has_access(12);
         $page = Sitecontent::where('ckey', $request->segment(3))->first();
@@ -279,7 +279,7 @@ class Pages extends Controller
         } else {
             $this->data['sitecontent'] = array();
         }
-        return view('admin.website_pages.site_hardscapes', $this->data);
+        return view('admin.website_pages.site_capabilities', $this->data);
     }
 
     

@@ -26,6 +26,8 @@ class Admin extends Model
         'site_icon',
         'site_thumb',
         'site_address',
+        'site_about_company',
+        'site_newsletter_text',
         'site_about',
         'site_copyright',
         'site_facebook',
