@@ -73,13 +73,7 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'request-quote' ? 'active' : '' }}"
-                        href="{{ url('admin/request-quote') }}" aria-expanded="false">
-                        <iconify-icon icon="tabler:message-user"></iconify-icon>
-                        <span class="hide-menu">Request Quotes</span>
-                    </a>
-                </li>
+             
 
                 <li class="sidebar-item">
                     <a class="sidebar-link {{ $admin_page == 'subscribers' ? 'active' : '' }}"
@@ -150,142 +144,15 @@
                 </ul>
                 </li> --}}
 
-                <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow {{ $admin_page == 'blog' || $admin_page == 'blog_categories' ? 'active' : '' }}"
-                        href="javascript:void(0)" aria-expanded="false">
-                        <iconify-icon icon="ooui:articles-rtl"></iconify-icon>
-                        <span class="hide-menu">Manage Blogs</span>
-                    </a>
-                    <ul aria-expanded="false"
-                        class="collapse first-level {{ $admin_page == 'blog' || $admin_page == 'blog_categories' ? 'in' : '' }}">
+                
 
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link {{ $admin_page == 'blog_categories' ? 'active' : '' }}"
-                                href="{{ url('admin/blog_categories') }}">
-                                <span class="icon-small"></span>Blogs
-                                Categories
-                            </a>
-                        </li>
-
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link {{ $admin_page == 'blog' ? 'active' : '' }}"
-                                href="{{ url('admin/blog') }}">
-                                <span class="icon-small"></span>Blogs
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </li>
-
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow {{ $admin_page == 'executive' || $admin_page == 'directors' || $admin_page == 'team' ? 'active' : '' }}"
-                href="javascript:void(0)" aria-expanded="false">
-                <iconify-icon icon="lucide:users"></iconify-icon>
-                <span class="hide-menu">Our Team</span>
-                </a>
-                <ul aria-expanded="false"
-                    class="collapse first-level {{ $admin_page == 'executive' || $admin_page == 'directors' || $admin_page == 'team' ? 'in' : '' }}">
-
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link {{ $admin_page == 'executive' ? 'active' : '' }}"
-                            href="{{ url('admin/executive') }}" aria-expanded="false">
-                            <iconify-icon icon="lucide:users"></iconify-icon>
-                            <span class="hide-menu">Executive Team Members</span>
-
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link {{ $admin_page == 'directors' ? 'active' : '' }}"
-                            href="{{ url('admin/directors') }}" aria-expanded="false">
-                            <iconify-icon icon="lucide:users"></iconify-icon>
-                            <span class="hide-menu">Board of Directors</span>
-
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link {{ $admin_page == 'team' ? 'active' : '' }}"
-                            href="{{ url('admin/team') }}" aria-expanded="false">
-                            <iconify-icon icon="lucide:users"></iconify-icon>
-                            <span class="hide-menu">Team</span>
-
-                        </a>
-                    </li>
-
-                </ul>
-                </li> --}}
-
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'testimonials' ? 'active' : '' }}"
-                href="{{ url('admin/testimonials') }}" aria-expanded="false">
-                <iconify-icon icon="dashicons:testimonial"></iconify-icon>
-                <span class="hide-menu">Testimonials</span>
-                </a>
-                </li> --}}
-
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'testimonials' ? 'active' : '' }}"
-                href="{{ url('admin/testimonials') }}" aria-expanded="false">
-                <iconify-icon icon="dashicons:testimonial"></iconify-icon>
-                <span class="hide-menu">Testimonials</span>
-                </a>
-                </li> --}}
-
-
-
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'aviva' ? 'active' : '' }}" href="{{ url('admin/aviva') }}"
-                        aria-expanded="false">
-                        <iconify-icon icon="arcticons:jobstreet"></iconify-icon>
-                        <span class="hide-menu">Aviva Pools</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'renaissance' ? 'active' : '' }}"
-                        href="{{ url('admin/renaissance') }}" aria-expanded="false">
-                        <iconify-icon icon="arcticons:jobstreet"></iconify-icon>
-                        <span class="hide-menu">Renaissance Patio</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'stick-built' ? 'active' : '' }}"
-                        href="{{ url('admin/stick-built') }}" aria-expanded="false">
-                        <iconify-icon icon="arcticons:jobstreet"></iconify-icon>
-                        <span class="hide-menu">Stick Built</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'hardscapes' ? 'active' : '' }}"
-                        href="{{ url('admin/hardscapes') }}" aria-expanded="false">
-                        <iconify-icon icon="arcticons:jobstreet"></iconify-icon>
-                        <span class="hide-menu">Hardscapes</span>
-                    </a>
-                </li>
-
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link {{ $admin_page == 'colors' ? 'active' : '' }}"
-                        href="{{ url('admin/colors') }}" aria-expanded="false">
-                        <iconify-icon icon="arcticons:jobstreet"></iconify-icon>
-                        <span class="hide-menu">Colors</span>
-                    </a>
-                </li>
-
-                <!-- <li class="sidebar-item">
+                <!-- < <li class="sidebar-item">
                     <a class="sidebar-link {{ $admin_page == 'services' ? 'active' : '' }}"
                         href="{{ url('admin/services') }}" aria-expanded="false">
                         <iconify-icon icon="carbon:cloud-services"></iconify-icon>
                         <span class="hide-menu">Services</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="sidebar-item">
                     <a class="sidebar-link {{ $admin_page == 'testimonials' ? 'active' : '' }}"
@@ -293,7 +160,7 @@
                         <iconify-icon icon="dashicons:testimonial"></iconify-icon>
                         <span class="hide-menu">Testimonials</span>
                     </a>
-                </li> -->
+                </li> 
 
 
                 {{-- <li class="sidebar-item">
@@ -413,7 +280,7 @@
                 </li> --}}
 
 
-                <li class="sidebar-item">
+                <!-- <li class="sidebar-item">
                     <a class="sidebar-link has-arrow {{ $admin_page == 'faqs' || $admin_page == 'faq_categories' ? 'active' : '' }}"
                         href="javascript:void(0)" aria-expanded="false">
                         <iconify-icon icon="mdi:faq"></iconify-icon>
@@ -432,7 +299,7 @@
 
 
                     </ul>
-                </li>
+                </li> -->
 
             </ul>
 

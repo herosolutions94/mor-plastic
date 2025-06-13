@@ -50,7 +50,29 @@ class FrontendPages extends Controller
 
         ];
         $this->data['cta_section'] = get_page('cta_section');
+                $this->data['testimonials'] = Testimonial_model::orderBy('id', 'ASC')->where('status', '1')->get();
+
         return view('frontend/pages/home', $this->data);
+    }
+
+     public function products(Request $request)
+    {
+        $this->data['content'] = get_page('products');
+        $this->data['page_title'] = $this->data['content']['page_title'] . ' - ' . $this->data['site_settings']->site_name;
+        $this->data['meta_desc'] = (object)[
+            'meta_title' => $this->data['content']['meta_title'],
+            'meta_description' => $this->data['content']['meta_description'],
+            'meta_keywords' => $this->data['content']['meta_keywords'],
+            'meta_image' => get_site_image_src('images', $this->data['site_settings']->site_thumb),
+            'og_title' => $this->data['content']['meta_title'],
+            'og_description' => $this->data['content']['meta_description'],
+            'meta_keywords' => $this->data['content']['meta_keywords'],
+            'twitter_image' => get_site_image_src('images', $this->data['site_settings']->site_thumb),
+            'og_image' => get_site_image_src('images', $this->data['site_settings']->site_thumb),
+
+        ];
+        $this->data['cta_section'] = get_page('cta_section');
+        return view('frontend/pages/products', $this->data);
     }
 
     public function about_page(Request $request)
@@ -70,7 +92,6 @@ class FrontendPages extends Controller
 
         ];
         $this->data['cta_section'] = get_page('cta_section');
-        $this->data['industries'] = getMultiText('industries-section1');
         $this->data['testimonials'] = Testimonial_model::orderBy('id', 'ASC')->where('status', '1')->get();
         return view('frontend/pages/about', $this->data);
     }
@@ -92,6 +113,8 @@ class FrontendPages extends Controller
 
         ];
         $this->data['cta_section'] = get_page('cta_section');
+                $this->data['testimonials'] = Testimonial_model::orderBy('id', 'ASC')->where('status', '1')->get();
+
 
 
         return view('frontend/pages/capabilities', $this->data);

@@ -125,7 +125,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/capabilities">Capabilities</a></li>
-                    <li><a href="product.php">Products</a></li>
+                    <li><a href="/products">Products</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                 </ul>
             </div>

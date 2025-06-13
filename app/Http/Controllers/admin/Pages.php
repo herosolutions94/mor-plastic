@@ -74,6 +74,71 @@ class Pages extends Controller
         return view('admin.website_pages.site_home', $this->data);
     }
 
+
+     public function products(Request $request)
+    {
+        has_access(12);
+        $page = Sitecontent::where('ckey', $request->segment(3))->first();
+        if (empty($page)) {
+            $page = new Sitecontent;
+            $page->ckey = $request->segment(3);
+            $page->code = '';
+            $page->save();
+        }
+        $input = $request->all();
+        if ($input) {
+            if (!empty($page->code)) {
+                $content_row = unserialize($page->code);
+            } else {
+                $content_row = array();
+            }
+            if (!is_array($content_row))
+                $content_row = array();
+            for ($i = 1; $i <= 40; $i++) {
+                if ($request->hasFile('image' . $i)) {
+
+                    $request->validate([
+                        'image' . $i => 'mimes:png,jpg,jpeg,svg,gif,webp|max:40000'
+                    ]);
+                    $image = $request->file('image' . $i)->store('public/images/');
+                    if (!empty($image)) {
+                        $input['image' . $i] = basename($image);
+                    }
+                }
+            }
+
+            $sec1['title'] = $input['sec1_title'] ?? '';
+            $sec1['txt1'] = $input['sec1_txt1'] ?? '';
+            $sec1['order_no'] = $input['sec1_order_no'] ?? '';
+            $sec1Phto['pics'] = $input['sec1_pics'] ?? '';
+            unset($input['sec1_pics'], $input['sec1_order_no'], $input['sec1_title'], $input['sec1_txt1']);
+            DB::table('multi_text')->where('section', 'industries-section1')->delete();
+            $sec1s = array('order_no' => $sec1['order_no'], 'title' => $sec1['title'], 'txt1' => $sec1['txt1']);
+            // pr($sec1Phto);
+            if (!empty($request->file('sec1_image')) || !empty($sec1Phto['pics'])) {
+                saveMultiMediaFieldsImgs('public/images/', $request->file('sec1_image'), 'sec1_image', 'industries-section1', $sec1Phto['pics'], $sec1s);
+            }
+            unset($input['sec1_image']);
+
+
+            // pr($input);
+            $data = serialize(array_merge($content_row, $input));
+            // pr($input);
+            $page->ckey = $request->segment(3);
+            $page->code = $data;
+            $page->save();
+            return redirect('admin/pages/' . $request->segment(3))
+                ->with('success', 'Content Updated Successfully');
+        }
+        $this->data['row'] = Sitecontent::where('ckey', $request->segment(3))->first();
+        if (!empty($this->data['row']->code)) {
+            $this->data['sitecontent'] = unserialize($this->data['row']->code);
+        } else {
+            $this->data['sitecontent'] = array();
+        }
+        return view('admin.website_pages.site_products', $this->data);
+    }
+
     public function aviva_pools(Request $request)
     {
         // has_access(12);
