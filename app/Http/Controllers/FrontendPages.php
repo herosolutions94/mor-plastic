@@ -75,9 +75,9 @@ class FrontendPages extends Controller
         return view('frontend/pages/about', $this->data);
     }
 
-    public function aviva_pools_page(Request $request)
+    public function capabilities_page(Request $request)
     {
-        $this->data['content'] = get_page('aviva_pools');
+        $this->data['content'] = get_page('capabilities');
         $this->data['page_title'] = $this->data['content']['page_title'] . ' - ' . $this->data['site_settings']->site_name;
         $this->data['meta_desc'] = (object)[
             'meta_title' => $this->data['content']['meta_title'],
@@ -91,11 +91,10 @@ class FrontendPages extends Controller
             'og_image' => get_site_image_src('images', $this->data['site_settings']->site_thumb),
 
         ];
-        $this->data['avivas'] = Aviva_model::orderBy('id', 'DESC')->where('status', '1')->where('featured', 1)->get();
         $this->data['cta_section'] = get_page('cta_section');
 
 
-        return view('frontend/pages/aviva-pools', $this->data);
+        return view('frontend/pages/capabilities', $this->data);
     }
 
     public function pool_details_page($slug)

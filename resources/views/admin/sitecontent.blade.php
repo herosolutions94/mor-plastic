@@ -72,9 +72,9 @@
 
                         <tr>
                             <td>5</td>
-                            <td width="65%">HardScapes</td>
+                            <td width="65%">Capabilities</td>
                             <td>
-                                <a href="{{ url('admin/pages/hardscapes') }}" class="btn btn-primary active">Edit
+                                <a href="{{ url('admin/pages/capabilities') }}" class="btn btn-primary active">Edit
                                     Page</a>
                             </td>
                         </tr>

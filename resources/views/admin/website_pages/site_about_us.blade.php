@@ -118,15 +118,17 @@
         <div class="card-body">
 
             <div class="row">
+
                 <div class="col-md-12">
+
                     <div class="row">
                         <div class="col-md-4">
-                            <label class="form-label" for="image2"> Image</label>
+                            <label class="form-label" for="image2">Image</label>
                             <div class="card w-100 border position-relative overflow-hidden">
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <div class="file_choose_icon">
-                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image2']) ? $sitecontent['image2'] : ' ') }}"
+                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image2']) ? $sitecontent['image2'] : '') }}"
                                                 alt="matdash-img" class="img-fluid ">
                                         </div>
                                         <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
@@ -136,27 +138,74 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section1_heading"> Heading</label>
+                                <input class="form-control" id="section1_heading" type="text" name="section1_heading"
+                                    placeholder="" value="{{ $sitecontent['section1_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section1_sub_heading">Sub Heading</label>
+                                <input class="form-control" id="section1_sub_heading" type="text"
+                                    name="section1_sub_heading" placeholder=""
+                                    value="{{ $sitecontent['section1_sub_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
 
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
                                 <label class="form-label" for="section1_text">Text</label>
                                 <textarea id="section1_text" name="section1_text" rows="4"
-                                    class=" form-control">{{ !empty($sitecontent['section1_text']) ? $sitecontent['section1_text'] : '' }}</textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="section1_heading"> Heading</label>
-                                <input class="form-control" id="section1_heading" type="text" name="section1_heading"
-                                    placeholder="" value="{{ $sitecontent['section1_heading'] ?? '' }}">
+                                    class="form-control">{{ !empty($sitecontent['section1_text']) ? $sitecontent['section1_text'] : '' }}</textarea>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section1_btn_txt">Button Text</label>
+                                <input class="form-control" id="section1_btn_txt" type="text" name="section1_btn_txt"
+                                    placeholder="" value="{{ $sitecontent['section1_btn_txt'] ?? '' }}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section1_btn_link">Button Link URL</label>
+                                <select name="section1_btn_link" class="form-control" required>
+                                    <option value="">Set URL</option>
+
+                                    @foreach ($all_pages as $key => $page)
+                                    <option value="{{ $key }}"
+                                        {{ !empty($sitecontent['section1_btn_link']) && $sitecontent['section1_btn_link'] == $key ? 'selected' : '' }}>
+                                        {{ $page }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
 
 
@@ -174,16 +223,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <!-- <div class="row">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="section4_heading">Heading</label>
-                                        <input class="form-control" id="section4_heading" type="text"
-                                            name="section4_heading" placeholder=""
-                                            value="{{ $sitecontent['section4_heading'] ?? '' }}">
-                                    </div>
-                                </div>
-                            </div> -->
+
 
                             <div class="row">
                                 <div class="col">
@@ -197,29 +237,70 @@
                                 </div>
                             </div>
 
-                            <!-- <div class="row">
-                                <div class="col-md-4">
-                                    <label class="form-label" for="image3">Image</label>
-                                    <div class="card w-100 border position-relative overflow-hidden">
-                                        <div class="card-body p-4">
-                                            <div class="text-center">
-                                                <div class="file_choose_icon">
-                                                    <img src="{{ get_site_image_src('images', !empty($sitecontent['image3']) ? $sitecontent['image3'] : '') }}"
-                                                        alt="matdash-img" class="img-fluid ">
-                                                </div>
-                                                <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                                                <input class="form-control uploadFile" name="image3" type="file"
-                                                    data-bs-original-title="" title="">
-                                            </div>
-                                        </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="section2_sub_heading">Sub Heading</label>
+                                        <input class="form-control" id="section2_sub_heading" type="text"
+                                            name="section2_sub_heading" placeholder=""
+                                            value="{{ $sitecontent['section2_sub_heading'] ?? '' }}">
                                     </div>
+
                                 </div>
-                            </div> -->
+                            </div>
+
+
 
 
                             <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="section2_heading1">Heading 1</label>
+                                        <input class="form-control" id="section2_heading1" type="text"
+                                            name="section2_heading1" placeholder=""
+                                            value="{{ $sitecontent['section2_heading1'] ?? '' }}">
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="section2_text1">Text 1</label>
+                                        <textarea id="section2_text1" name="section2_text1" rows="4"
+                                            class="form-control">{{ !empty($sitecontent['section2_text1']) ? $sitecontent['section2_text1'] : '' }}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="section2_heading2">Heading 2</label>
+                                        <input class="form-control" id="section2_heading2" type="text"
+                                            name="section2_heading2" placeholder=""
+                                            value="{{ $sitecontent['section2_heading2'] ?? '' }}">
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="section2_text2">Text 2</label>
+                                        <textarea id="section2_text2" name="section2_text2" rows="4"
+                                            class="form-control">{{ !empty($sitecontent['section2_text2']) ? $sitecontent['section2_text2'] : '' }}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <?php $section2 = 0; ?>
-                                @for ($i = 3; $i <= 5; $i++) <?php $section2 = $section2 + 1; ?> <div class="col-md-4">
+                                @for ($i = 3; $i <= 6; $i++) <?php $section2 = $section2 + 1; ?> <div class="col-md-6">
                                     <div class="card">
                                         <div class="card-header">
                                             <h5>Block {{ $section2 }}</h5>
@@ -258,24 +339,31 @@
                                                             type="text" name="sec2_heading{{ $i }}" placeholder=""
                                                             value="{{ !empty($sitecontent['sec2_heading' . $i]) ? $sitecontent['sec2_heading' . $i] : '' }}">
                                                     </div>
-                                                    <div class="mb-4">
-                                                        <label class="form-label"
-                                                            for="section1_text{{ $i }}">Text</label>
-                                                        <textarea id="section2_text{{ $i }}"
-                                                            name="section2_text{{ $i }}" rows="4"
-                                                            class=" form-control">{{ !empty($sitecontent['section2_text' . $i]) ? $sitecontent['section2_text' . $i] : '' }}</textarea>
-
-                                                    </div>
                                                 </div>
 
+
                                             </div>
+                                            <div class="col">
+                                                <div class="mb-4">
+                                                    <label class="form-label" for="sec2_text{{ $i }}">Text
+                                                        {{ $section2 }}</label>
+
+                                                    <textarea class="form-control" id="sec2_text{{ $i }}" type="text"
+                                                        name="sec2_text{{ $i }}">{{ !empty($sitecontent['sec2_text' . $i]) ? $sitecontent['sec2_text' . $i] : '' }}</textarea>
+                                                </div>
+                                            </div>
+
+
 
 
 
                                         </div>
                                     </div>
                             </div>
+
                             @endfor
+
+
                         </div>
 
                         <div class="row">
@@ -333,7 +421,7 @@
     </div>
 
 
-    </div>
+
 
     <div class="card">
 
@@ -356,6 +444,49 @@
                             </div>
                         </div>
                     </div> -->
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label" for="image7">Image</label>
+                            <div class="card w-100 border position-relative overflow-hidden">
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <div class="file_choose_icon">
+                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image7']) ? $sitecontent['image7'] : '') }}"
+                                                alt="matdash-img" class="img-fluid ">
+                                        </div>
+                                        <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
+                                        <input class="form-control uploadFile" name="image7" type="file"
+                                            data-bs-original-title="" title="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section3_heading"> Heading</label>
+                                <input class="form-control" id="section3_heading" type="text" name="section3_heading"
+                                    placeholder="" value="{{ $sitecontent['section3_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section3_sub_heading">Sub Heading</label>
+                                <input class="form-control" id="section3_sub_heading" type="text"
+                                    name="section3_sub_heading" placeholder=""
+                                    value="{{ $sitecontent['section3_sub_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
 
 
                     <div class="row">
@@ -393,16 +524,16 @@
 
                     <div class="row">
                         <div class="col-md-4">
-                            <label class="form-label" for="image3">Image</label>
+                            <label class="form-label" for="image8">Image</label>
                             <div class="card w-100 border position-relative overflow-hidden">
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <div class="file_choose_icon">
-                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image6']) ? $sitecontent['image6'] : '') }}"
+                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image8']) ? $sitecontent['image8'] : '') }}"
                                                 alt="matdash-img" class="img-fluid ">
                                         </div>
                                         <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                                        <input class="form-control uploadFile" name="image6" type="file"
+                                        <input class="form-control uploadFile" name="image8" type="file"
                                             data-bs-original-title="" title="">
                                     </div>
                                 </div>
@@ -419,6 +550,30 @@
                             </div>
                         </div>
                     </div> -->
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section4_heading"> Heading</label>
+                                <input class="form-control" id="section4_heading" type="text" name="section4_heading"
+                                    placeholder="" value="{{ $sitecontent['section4_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label class="form-label" for="section4_sub_heading">Sub Heading</label>
+                                <input class="form-control" id="section4_sub_heading" type="text"
+                                    name="section4_sub_heading" placeholder=""
+                                    value="{{ $sitecontent['section4_sub_heading'] ?? '' }}">
+                            </div>
+
+                        </div>
+                    </div>
 
 
                     <div class="row">
@@ -480,35 +635,17 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="form-label" for="image2"> Image</label>
-                            <div class="card w-100 border position-relative overflow-hidden">
-                                <div class="card-body p-4">
-                                    <div class="text-center">
-                                        <div class="file_choose_icon">
-                                            <img src="{{ get_site_image_src('images', !empty($sitecontent['image7']) ? $sitecontent['image7'] : ' ') }}"
-                                                alt="matdash-img" class="img-fluid ">
-                                        </div>
-                                        <p class="mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                                        <input class="form-control uploadFile" name="image7" type="file"
-                                            data-bs-original-title="" title="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-
-                    </div>
 
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
-                                <label class="form-label" for="section5_text">Text</label>
-                                <textarea id="section5_text" name="section5_text" rows="4"
-                                    class=" form-control">{{ !empty($sitecontent['section5_text']) ? $sitecontent['section5_text'] : '' }}</textarea>
+                                <label class="form-label" for="section5_sub_heading">Sub Heading</label>
+                                <input id="section5_sub_heading" name="section5_sub_heading" class=" form-control"
+                                    placeholder=""
+                                    value="{{ !empty($sitecontent['section5_sub_heading']) ? $sitecontent['section5_sub_heading'] : '' }}">
                             </div>
-                            <div class="mb-3">
+                            <div class=" mb-3">
                                 <label class="form-label" for="section5_heading"> Heading</label>
                                 <input class="form-control" id="section5_heading" type="text" name="section5_heading"
                                     placeholder="" value="{{ $sitecontent['section5_heading'] ?? '' }}">

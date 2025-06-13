@@ -193,6 +193,21 @@
                         name="site_copyright">{{ $site_settings->site_copyright }}</textarea>
                 </div>
             </div>
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label for="site_about_company" class="form-label">About Company</label>
+                    <textarea class="editor" id="site_about_company" rows="3"
+                        name="site_about_company">{{ $site_settings->site_about_company }}</textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="mb-3">
+                    <label for="site_newsletter_text" class="form-label">Newsletter Text</label>
+                    <textarea class="form-control" id="site_newsletter_text" rows="3"
+                        name="site_newsletter_text">{{ $site_settings->site_newsletter_text }}</textarea>
+                </div>
+            </div>
 
             {{-- <div class="col-lg-12">
                             <div class="mb-3">

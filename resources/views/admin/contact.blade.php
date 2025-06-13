@@ -48,9 +48,9 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-between py-3 border-top">
                             <div>
-                                <h5 class="fs-4 fw-semibold mb-0">How do you hear about us?</h5>
+                                <h5 class="fs-4 fw-semibold mb-0">Subject</h5>
                             </div>
-                            <p class="mb-0">{{ $row->hear_about_us }}</p>
+                            <p class="mb-0">{{ $row->subject }}</p>
                         </div>
                     </div>
                 </div>
