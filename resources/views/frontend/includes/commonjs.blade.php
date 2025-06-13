@@ -6,6 +6,7 @@
 <script type="text/javascript" src="{{ asset('assets/js/slick.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/main.js?v=0.3') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/aos.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/lightgallery-all.min.j') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
@@ -20,5 +21,11 @@ $(document).ready(function() {
     AOS.init({
         duration: 2000
     });
+
+    $('.imgGallery').lightGallery({
+
+            thumbnail: true
+
+        });
 });
 </script>

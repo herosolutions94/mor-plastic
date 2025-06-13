@@ -4,81 +4,94 @@
 
 @section('content')
 
-<section class="sm_banner" style="background-image: url('{{ get_site_image_src('images', !empty($content['image1']) ? $content['image1'] : 'default.jpg') }}')">
-    <div class="contain">
-        <div class="cntnt" data-aos="fade-up">
-              <h1>{!! $content['banner_heading'] ?? '' !!}</h1>
-            <p>{!! $content['banner_text'] ?? '' !!}</p>
-        </div>
-    </div>
-</section>
-<section class="contact_info">
-    <div class="contain">
-        <div class="flex">
-            <div class="colL" data-aos="fade-right">
-              <h3>{!! $content['section1_heading'] ?? '' !!}</h3>
-                <p>{!! $content['section1_text'] ?? '' !!}</p>
-            </div>
-            <div class="colR" data-aos="fade-left">
-                <div class="flex_contact">
-                    <div class="col">
-                        <div class="inner">
-                            <div class="img_icon">
-                                <img src="assets/images/map.svg" alt="">
-                            </div>
-                            <p>{{$site_settings->site_address}}</p>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="inner">
-                            <div class="img_icon">
-                                <img src="assets/images/call.svg" alt="">
-                            </div>
-                            <a href="tel:{{$site_settings->site_phone}}">{{$site_settings->site_phone}}</a>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="inner">
-                            <div class="img_icon">
-                                <img src="assets/images/email.svg" alt="">
-                            </div>
-                            <a href="mailto:{{$site_settings->site_email}}">{{$site_settings->site_email}}</a>
-                        </div>
-                    </div>
-                </div>
+<main index>
+    <section class="sub_banner">
+        <div class="contain">
+            <div class="cntnt">
+                <h1>Get In Touch</h1>
+                <p>Any question or remarks? Just write us a message!</p>
             </div>
         </div>
-        <form id="contactForm" action="{{url('/api/save-contact-message')}}" data-aos="fade-up" class="frmAjax">
-            @csrf
-            <h3>Have a Quick Question?</h3>
-            <div class="row form_row">
-                <div class="col-md-6">
-                    <input type="text" class="input" name="fname" placeholder="First Name" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="input" name="lname" placeholder="Last Name" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="input" name="phone" placeholder="Phone Number" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="input" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="col-md-12">
-                    <textarea name="message" id="" placeholder="Enter Your Message Here" class="input"></textarea>
-                </div>
-                <div class="col-md-12">
-                    <input type="text" class="input" name="hear_about_us" placeholder="How did you hear about us?">
+    </section>
+    <section class="contact_pg">
+            <div class="contain">
+                <div class="flex">
+                    <div class="colL">
+                        <div class="inner">
+                            <h3>Contact Information</h3>
+                            <p>Say something to start a live chat!</p>
+                            <ul class="lst_top">
+                                <li>
+                                    <a href="tel:516-816-5251">
+                                    <img src="./assets/images/call.svg" alt="">
+                                    <span>516-816-5251</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:Info@morplastics.com">
+                                    <img src="./assets/images/email.svg" alt="">
+                                    <span>Info@morplastics.com</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <p>
+                                    <img src="./assets/images/map.svg" alt="">
+                                    <span>MOR Plastics, LLC 10624 Avenue D, Brooklyn, NY 11236</span>
+                                    </p>
+                                </li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <div class="colR">
+                        <form action="">
+                            <div class="form_row row">
+                                <div class="col-sm-6">
+                                    <div class="txtGrp">
+                                        <label>First Name</label>
+                                        <input type="text" name="" value="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="txtGrp">
+                                        <label>Last Name</label>
+                                        <input type="text" name="" value="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="txtGrp">
+                                        <label>Email</label>
+                                        <input type="text" name="" value="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="txtGrp">
+                                        <label>Phone</label>
+                                        <input type="text" name="" value="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="txtGrp">
+                                        <label>Subject</label>
+                                        <input type="text" name="" value="" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="txtGrp">
+                                        <label>Message</label>
+                                        <textarea class="input" name=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_blk text-center">
+                                <button class="site_btn orange" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="btn_blk">
-                <button type="submit" class="site_btn" >Send Message<i class="spinner hidden"></i></button>
-            </div>
-        </form>
-    </div>
-</section>
+        </section>
+    </main>
 
 
 

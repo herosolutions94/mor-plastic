@@ -36,24 +36,7 @@ $(document).ready(function() {
     });
     /*----- video button -----*/
 
-/*_____ FAQ's _____*/
-$(document).on("click", ".faqBlk > h5", function() {
-    $(".faqBlk")
-        .not(
-            $(this)
-                .parent()
-                .toggleClass("active")
-        )
-        .removeClass("active");
-    $(".faqBlk > .txt")
-        .not(
-            $(this)
-                .parent()
-                .children(".txt")
-                .slideToggle()
-        )
-        .slideUp();
-});
+
 var vid = $('video');
     // var vid = document.getElementById("bannerVid");
     // $(document).on('click', '.fa-play', function() {
@@ -112,69 +95,6 @@ $('.datepicker').datepicker({
             responsive: true
         });
 
-        $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-        });
-
-        $('.slider-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: false,
-        centerMode: true,
-        focusOnSelect: true
-        });
-
-        $('.grid_view').slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            dots: false,
-            centerMode: true,
-            focusOnSelect: true,
-            responsive: [
-                {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: false,
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: false,
-                }
-                }
-            ]
-            });
-            $('.color-slider').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: true,
-            centerMode: true,
-            centerPadding: '0',
-            responsive: [
-                {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 3
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1
-                }
-                }
-            ]
-            });
-        
-        
         $('#banner_carousel').owlCarousel({
             autoplay: true,
             nav: false,

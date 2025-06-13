@@ -26,6 +26,7 @@
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ asset('css/App.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/commonCss.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/lightgallery.min.css') }}">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
 
 
