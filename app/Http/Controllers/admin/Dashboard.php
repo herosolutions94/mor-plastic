@@ -180,6 +180,8 @@ class Dashboard extends Controller
         $admin->site_email = $request->site_email;
         $admin->site_noreply_email = $request->site_noreply_email;
         $admin->site_address = $request->site_address;
+        $admin->site_about_company = $request->site_about_company;
+        $admin->site_newsletter_text = $request->site_newsletter_text;
         $admin->site_about = $request->site_about;
         $admin->site_copyright = $request->site_copyright;
         $admin->site_meta_desc = $request->site_meta_desc;

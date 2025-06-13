@@ -31,6 +31,16 @@
                     </div>
 
                 </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label" for="cta_sub_heading">Sub Heading</label>
+                            <input class="form-control" id="cta_sub_heading" type="text" name="cta_sub_heading"
+                                placeholder="" value="{{ $sitecontent['cta_sub_heading'] ?? '' }}">
+                        </div>
+
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col">

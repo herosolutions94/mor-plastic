@@ -29,6 +29,8 @@ return new class extends Migration
             $table->string('site_icon')->nullable(true);
             $table->string('site_thumb')->nullable(true);
             $table->string('site_address')->nullable(true);
+            $table->string('site_about_company')->nullable(true);
+            $table->string('site_newsletter_text')->nullable(true);
             $table->text('site_about')->nullable(true);
             $table->string('site_copyright')->nullable(true);
             $table->string('site_facebook')->nullable(true);

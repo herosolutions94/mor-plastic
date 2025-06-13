@@ -215,7 +215,7 @@ class Ajax extends Controller
                 'lname' => 'required',
                 'phone' => 'required',               
                 'message' => 'required',
-                'hear_about_us' => 'required',
+                'subject' => 'required',
                 // 'feedback_type' => 'required',
 
             ];
@@ -232,7 +232,7 @@ class Ajax extends Controller
                     'email' => $input['email'],
                     'phone' => $input['phone'],
                      'message' => $input['message'],
-                    'hear_about_us' => $input['hear_about_us'],                   
+                    'subject' => $input['subject'],                   
                     'status' => 0
                 );
                 // pr($data);

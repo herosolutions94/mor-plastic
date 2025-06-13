@@ -29,7 +29,7 @@ class Pages extends Controller
             }
             if (!is_array($content_row))
                 $content_row = array();
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 30; $i++) {
                 if ($request->hasFile('image' . $i)) {
 
                     $request->validate([
@@ -233,7 +233,7 @@ class Pages extends Controller
 
     
 
-    public function hardscapes(Request $request)
+    public function capabilities(Request $request)
     {
         has_access(12);
         $page = Sitecontent::where('ckey', $request->segment(3))->first();
@@ -279,7 +279,7 @@ class Pages extends Controller
         } else {
             $this->data['sitecontent'] = array();
         }
-        return view('admin.website_pages.site_hardscapes', $this->data);
+        return view('admin.website_pages.site_capabilities', $this->data);
     }
 
     

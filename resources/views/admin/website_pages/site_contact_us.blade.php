@@ -131,7 +131,7 @@
                             <div class="mb-3">
                                 <label class="form-label" for="section1_text">Text</label>
                                 <textarea id="section1_text" name="section1_text" rows="4"
-                                    class="editor">{{ $sitecontent['section1_text'] ?? '' }}</textarea>
+                                    class="form-control">{{ $sitecontent['section1_text'] ?? '' }}</textarea>
                             </div>
                         </div>
                     </div>
